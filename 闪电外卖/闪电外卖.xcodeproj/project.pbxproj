@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		3C88FFC31BDC92BC0013A231 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C88FFC21BDC92BC0013A231 /* main.m */; };
 		3C88FFC61BDC92BC0013A231 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C88FFC51BDC92BC0013A231 /* AppDelegate.m */; };
-		3C88FFC91BDC92BC0013A231 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C88FFC81BDC92BC0013A231 /* ViewController.m */; };
 		3C88FFCC1BDC92BC0013A231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C88FFCA1BDC92BC0013A231 /* Main.storyboard */; };
 		3C88FFCE1BDC92BC0013A231 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C88FFCD1BDC92BC0013A231 /* Images.xcassets */; };
 		3C88FFD11BDC92BC0013A231 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C88FFCF1BDC92BC0013A231 /* LaunchScreen.xib */; };
 		3C88FFDD1BDC92BC0013A231 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C88FFDC1BDC92BC0013A231 /* ____Tests.m */; };
+		C9DBAB601BDC9D6A0055FCA9 /* WMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB5F1BDC9D6A0055FCA9 /* WMHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		3C88FFC21BDC92BC0013A231 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C88FFC41BDC92BC0013A231 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C88FFC51BDC92BC0013A231 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3C88FFC71BDC92BC0013A231 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3C88FFC81BDC92BC0013A231 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3C88FFCB1BDC92BC0013A231 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C88FFCD1BDC92BC0013A231 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3C88FFD01BDC92BC0013A231 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3C88FFD61BDC92BC0013A231 /* 闪电外卖Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "闪电外卖Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C88FFDB1BDC92BC0013A231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C88FFDC1BDC92BC0013A231 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		C9DBAB5E1BDC9D6A0055FCA9 /* WMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMHomeViewController.h; sourceTree = "<group>"; };
+		C9DBAB5F1BDC9D6A0055FCA9 /* WMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +81,13 @@
 		3C88FFBF1BDC92BC0013A231 /* 闪电外卖 */ = {
 			isa = PBXGroup;
 			children = (
-				3C88FFC41BDC92BC0013A231 /* AppDelegate.h */,
-				3C88FFC51BDC92BC0013A231 /* AppDelegate.m */,
-				3C88FFC71BDC92BC0013A231 /* ViewController.h */,
-				3C88FFC81BDC92BC0013A231 /* ViewController.m */,
-				3C88FFCA1BDC92BC0013A231 /* Main.storyboard */,
+				C9DBAB651BDC9E2F0055FCA9 /* Main */,
+				C9DBAB641BDC9E160055FCA9 /* Mine */,
+				C9DBAB631BDC9DFE0055FCA9 /* Discover */,
+				C9DBAB621BDC9DDD0055FCA9 /* Order */,
+				C9DBAB5D1BDC9C920055FCA9 /* Home */,
+				C9DBAB611BDC9DAE0055FCA9 /* Other */,
 				3C88FFCD1BDC92BC0013A231 /* Images.xcassets */,
-				3C88FFCF1BDC92BC0013A231 /* LaunchScreen.xib */,
 				3C88FFC01BDC92BC0013A231 /* Supporting Files */,
 			);
 			path = "闪电外卖";
@@ -117,6 +117,54 @@
 				3C88FFDB1BDC92BC0013A231 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9DBAB5D1BDC9C920055FCA9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C9DBAB5E1BDC9D6A0055FCA9 /* WMHomeViewController.h */,
+				C9DBAB5F1BDC9D6A0055FCA9 /* WMHomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		C9DBAB611BDC9DAE0055FCA9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3C88FFC41BDC92BC0013A231 /* AppDelegate.h */,
+				3C88FFC51BDC92BC0013A231 /* AppDelegate.m */,
+				3C88FFCA1BDC92BC0013A231 /* Main.storyboard */,
+				3C88FFCF1BDC92BC0013A231 /* LaunchScreen.xib */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		C9DBAB621BDC9DDD0055FCA9 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Order;
+			sourceTree = "<group>";
+		};
+		C9DBAB631BDC9DFE0055FCA9 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
+		C9DBAB641BDC9E160055FCA9 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Mine;
+			sourceTree = "<group>";
+		};
+		C9DBAB651BDC9E2F0055FCA9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +211,7 @@
 		3C88FFB51BDC92BC0013A231 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WM;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = WM;
 				TargetAttributes = {
@@ -219,8 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C88FFC91BDC92BC0013A231 /* ViewController.m in Sources */,
 				3C88FFC61BDC92BC0013A231 /* AppDelegate.m in Sources */,
+				C9DBAB601BDC9D6A0055FCA9 /* WMHomeViewController.m in Sources */,
 				3C88FFC31BDC92BC0013A231 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +465,7 @@
 				3C88FFE21BDC92BC0013A231 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C88FFE31BDC92BC0013A231 /* Build configuration list for PBXNativeTarget "闪电外卖Tests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +474,7 @@
 				3C88FFE51BDC92BC0013A231 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
