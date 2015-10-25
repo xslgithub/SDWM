@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"项目初始化");
 }
 
 - (void)didReceiveMemoryWarning {
