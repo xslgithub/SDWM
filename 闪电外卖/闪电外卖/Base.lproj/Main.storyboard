@@ -8,7 +8,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="beh-rS-Wxc">
             <objects>
-                <tabBarController id="siW-1E-q8f" sceneMemberID="viewController">
+                <tabBarController id="siW-1E-q8f" customClass="WMTabBarController" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="IG2-72-P6p">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -31,7 +31,7 @@
         <scene sceneID="q8b-Hc-BkY">
             <objects>
                 <navigationController id="oob-IM-tLZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="外卖" id="NSE-0g-XjW"/>
+                    <tabBarItem key="tabBarItem" title="外卖" image="tabbar_waimai" selectedImage="tabbar_waimai_selected" id="NSE-0g-XjW"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cHk-UY-0dZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -79,11 +79,11 @@
             </objects>
             <point key="canvasLocation" x="1085.5" y="-804.5"/>
         </scene>
-        <!--Item-->
+        <!--订单-->
         <scene sceneID="Aux-B0-YhW">
             <objects>
                 <navigationController id="kY0-8v-qjL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="DTi-yf-Fc4"/>
+                    <tabBarItem key="tabBarItem" title="订单" image="tabbar_order" selectedImage="tabbar_order_selected" id="DTi-yf-Fc4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="05N-u6-wZq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -131,11 +131,11 @@
             </objects>
             <point key="canvasLocation" x="1085.5" y="-39.5"/>
         </scene>
-        <!--Item-->
+        <!--发现-->
         <scene sceneID="Cca-KH-ox8">
             <objects>
                 <navigationController id="LNt-rf-N2l" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FKO-lb-jQ6"/>
+                    <tabBarItem key="tabBarItem" title="发现" image="tabbar_discover" selectedImage="tabbar_discover_selected" id="FKO-lb-jQ6"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Che-BI-HuO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -171,11 +171,11 @@
             </objects>
             <point key="canvasLocation" x="1085.5" y="689.5"/>
         </scene>
-        <!--Item-->
+        <!--我的-->
         <scene sceneID="Ryv-4H-WfK">
             <objects>
                 <navigationController id="sKX-68-59s" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="8OH-g4-vrJ"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="tabbar_mine" selectedImage="tabbar_mine_selected" id="8OH-g4-vrJ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MZY-w1-PVB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -224,4 +224,14 @@
             <point key="canvasLocation" x="1085.5" y="1449.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_discover" width="25" height="25"/>
+        <image name="tabbar_discover_selected" width="25" height="25"/>
+        <image name="tabbar_mine" width="25" height="25"/>
+        <image name="tabbar_mine_selected" width="25" height="25"/>
+        <image name="tabbar_order" width="25" height="25"/>
+        <image name="tabbar_order_selected" width="25" height="25"/>
+        <image name="tabbar_waimai" width="25" height="25"/>
+        <image name="tabbar_waimai_selected" width="25" height="25"/>
+    </resources>
 </document>
