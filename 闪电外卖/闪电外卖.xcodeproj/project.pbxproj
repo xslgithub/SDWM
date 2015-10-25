@@ -14,6 +14,18 @@
 		3C88FFD11BDC92BC0013A231 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C88FFCF1BDC92BC0013A231 /* LaunchScreen.xib */; };
 		3C88FFDD1BDC92BC0013A231 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C88FFDC1BDC92BC0013A231 /* ____Tests.m */; };
 		C9DBAB601BDC9D6A0055FCA9 /* WMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB5F1BDC9D6A0055FCA9 /* WMHomeViewController.m */; };
+		C9DBAB6F1BDCC34D0055FCA9 /* WMTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB6E1BDCC34D0055FCA9 /* WMTabBarViewController.m */; };
+		C9DBAB721BDCC3680055FCA9 /* WMNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB711BDCC3680055FCA9 /* WMNavigationViewController.m */; };
+		C9DBAB751BDCC38A0055FCA9 /* WMMineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB741BDCC38A0055FCA9 /* WMMineTableViewController.m */; };
+		C9DBAB781BDCC39B0055FCA9 /* WMDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB771BDCC39B0055FCA9 /* WMDiscoverViewController.m */; };
+		C9DBAB7B1BDCC3DA0055FCA9 /* WMOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB7A1BDCC3DA0055FCA9 /* WMOrderViewController.m */; };
+		C9DBAB821BDCCA410055FCA9 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB7F1BDCCA410055FCA9 /* UIBarButtonItem+Extension.m */; };
+		C9DBAB831BDCCA410055FCA9 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB811BDCCA410055FCA9 /* UIView+Extension.m */; };
+		C9DBAB871BDCCAFA0055FCA9 /* WMText1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB851BDCCAFA0055FCA9 /* WMText1ViewController.m */; };
+		C9DBAB881BDCCAFA0055FCA9 /* WMText1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DBAB861BDCCAFA0055FCA9 /* WMText1ViewController.xib */; };
+		C9DBAB8C1BDCCB0D0055FCA9 /* WMText2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB8A1BDCCB0D0055FCA9 /* WMText2ViewController.m */; };
+		C9DBAB8D1BDCCB0D0055FCA9 /* WMText2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DBAB8B1BDCCB0D0055FCA9 /* WMText2ViewController.xib */; };
+		C9DBAB911BDCCD740055FCA9 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB901BDCCD740055FCA9 /* Colours.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +52,28 @@
 		3C88FFDC1BDC92BC0013A231 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
 		C9DBAB5E1BDC9D6A0055FCA9 /* WMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMHomeViewController.h; sourceTree = "<group>"; };
 		C9DBAB5F1BDC9D6A0055FCA9 /* WMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMHomeViewController.m; sourceTree = "<group>"; };
+		C9DBAB6D1BDCC34D0055FCA9 /* WMTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMTabBarViewController.h; sourceTree = "<group>"; };
+		C9DBAB6E1BDCC34D0055FCA9 /* WMTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMTabBarViewController.m; sourceTree = "<group>"; };
+		C9DBAB701BDCC3680055FCA9 /* WMNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNavigationViewController.h; sourceTree = "<group>"; };
+		C9DBAB711BDCC3680055FCA9 /* WMNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNavigationViewController.m; sourceTree = "<group>"; };
+		C9DBAB731BDCC38A0055FCA9 /* WMMineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMineTableViewController.h; sourceTree = "<group>"; };
+		C9DBAB741BDCC38A0055FCA9 /* WMMineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMineTableViewController.m; sourceTree = "<group>"; };
+		C9DBAB761BDCC39B0055FCA9 /* WMDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDiscoverViewController.h; sourceTree = "<group>"; };
+		C9DBAB771BDCC39B0055FCA9 /* WMDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDiscoverViewController.m; sourceTree = "<group>"; };
+		C9DBAB791BDCC3DA0055FCA9 /* WMOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMOrderViewController.h; sourceTree = "<group>"; };
+		C9DBAB7A1BDCC3DA0055FCA9 /* WMOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMOrderViewController.m; sourceTree = "<group>"; };
+		C9DBAB7E1BDCCA410055FCA9 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		C9DBAB7F1BDCCA410055FCA9 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		C9DBAB801BDCCA410055FCA9 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		C9DBAB811BDCCA410055FCA9 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		C9DBAB841BDCCAFA0055FCA9 /* WMText1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMText1ViewController.h; sourceTree = "<group>"; };
+		C9DBAB851BDCCAFA0055FCA9 /* WMText1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMText1ViewController.m; sourceTree = "<group>"; };
+		C9DBAB861BDCCAFA0055FCA9 /* WMText1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMText1ViewController.xib; sourceTree = "<group>"; };
+		C9DBAB891BDCCB0D0055FCA9 /* WMText2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMText2ViewController.h; sourceTree = "<group>"; };
+		C9DBAB8A1BDCCB0D0055FCA9 /* WMText2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMText2ViewController.m; sourceTree = "<group>"; };
+		C9DBAB8B1BDCCB0D0055FCA9 /* WMText2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMText2ViewController.xib; sourceTree = "<group>"; };
+		C9DBAB8F1BDCCD740055FCA9 /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
+		C9DBAB901BDCCD740055FCA9 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +176,8 @@
 		C9DBAB621BDC9DDD0055FCA9 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				C9DBAB791BDCC3DA0055FCA9 /* WMOrderViewController.h */,
+				C9DBAB7A1BDCC3DA0055FCA9 /* WMOrderViewController.m */,
 			);
 			name = Order;
 			sourceTree = "<group>";
@@ -149,6 +185,14 @@
 		C9DBAB631BDC9DFE0055FCA9 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				C9DBAB761BDCC39B0055FCA9 /* WMDiscoverViewController.h */,
+				C9DBAB771BDCC39B0055FCA9 /* WMDiscoverViewController.m */,
+				C9DBAB841BDCCAFA0055FCA9 /* WMText1ViewController.h */,
+				C9DBAB851BDCCAFA0055FCA9 /* WMText1ViewController.m */,
+				C9DBAB861BDCCAFA0055FCA9 /* WMText1ViewController.xib */,
+				C9DBAB891BDCCB0D0055FCA9 /* WMText2ViewController.h */,
+				C9DBAB8A1BDCCB0D0055FCA9 /* WMText2ViewController.m */,
+				C9DBAB8B1BDCCB0D0055FCA9 /* WMText2ViewController.xib */,
 			);
 			name = Discover;
 			sourceTree = "<group>";
@@ -156,6 +200,8 @@
 		C9DBAB641BDC9E160055FCA9 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				C9DBAB731BDCC38A0055FCA9 /* WMMineTableViewController.h */,
+				C9DBAB741BDCC38A0055FCA9 /* WMMineTableViewController.m */,
 			);
 			name = Mine;
 			sourceTree = "<group>";
@@ -163,8 +209,51 @@
 		C9DBAB651BDC9E2F0055FCA9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C9DBAB921BDCCD7D0055FCA9 /* Tools */,
+				C9DBAB7D1BDCCA200055FCA9 /* Category */,
+				C9DBAB7C1BDCCA120055FCA9 /* Controller */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		C9DBAB7C1BDCCA120055FCA9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C9DBAB6D1BDCC34D0055FCA9 /* WMTabBarViewController.h */,
+				C9DBAB6E1BDCC34D0055FCA9 /* WMTabBarViewController.m */,
+				C9DBAB701BDCC3680055FCA9 /* WMNavigationViewController.h */,
+				C9DBAB711BDCC3680055FCA9 /* WMNavigationViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C9DBAB7D1BDCCA200055FCA9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C9DBAB7E1BDCCA410055FCA9 /* UIBarButtonItem+Extension.h */,
+				C9DBAB7F1BDCCA410055FCA9 /* UIBarButtonItem+Extension.m */,
+				C9DBAB801BDCCA410055FCA9 /* UIView+Extension.h */,
+				C9DBAB811BDCCA410055FCA9 /* UIView+Extension.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		C9DBAB8E1BDCCD740055FCA9 /* Colours */ = {
+			isa = PBXGroup;
+			children = (
+				C9DBAB8F1BDCCD740055FCA9 /* Colours.h */,
+				C9DBAB901BDCCD740055FCA9 /* Colours.m */,
+			);
+			name = Colours;
+			path = "颜色-Colours";
+			sourceTree = "<group>";
+		};
+		C9DBAB921BDCCD7D0055FCA9 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C9DBAB8E1BDCCD740055FCA9 /* Colours */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +337,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9DBAB8D1BDCCB0D0055FCA9 /* WMText2ViewController.xib in Resources */,
 				3C88FFCC1BDC92BC0013A231 /* Main.storyboard in Resources */,
 				3C88FFD11BDC92BC0013A231 /* LaunchScreen.xib in Resources */,
 				3C88FFCE1BDC92BC0013A231 /* Images.xcassets in Resources */,
+				C9DBAB881BDCCAFA0055FCA9 /* WMText1ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,8 +359,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9DBAB8C1BDCCB0D0055FCA9 /* WMText2ViewController.m in Sources */,
+				C9DBAB831BDCCA410055FCA9 /* UIView+Extension.m in Sources */,
+				C9DBAB751BDCC38A0055FCA9 /* WMMineTableViewController.m in Sources */,
+				C9DBAB7B1BDCC3DA0055FCA9 /* WMOrderViewController.m in Sources */,
+				C9DBAB911BDCCD740055FCA9 /* Colours.m in Sources */,
 				3C88FFC61BDC92BC0013A231 /* AppDelegate.m in Sources */,
+				C9DBAB871BDCCAFA0055FCA9 /* WMText1ViewController.m in Sources */,
+				C9DBAB781BDCC39B0055FCA9 /* WMDiscoverViewController.m in Sources */,
 				C9DBAB601BDC9D6A0055FCA9 /* WMHomeViewController.m in Sources */,
+				C9DBAB6F1BDCC34D0055FCA9 /* WMTabBarViewController.m in Sources */,
+				C9DBAB821BDCCA410055FCA9 /* UIBarButtonItem+Extension.m in Sources */,
+				C9DBAB721BDCC3680055FCA9 /* WMNavigationViewController.m in Sources */,
 				3C88FFC31BDC92BC0013A231 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

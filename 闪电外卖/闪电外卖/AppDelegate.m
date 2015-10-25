@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WMTabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    self.window.rootViewController = [[WMTabBarViewController alloc] init];
+    [self.window makeKeyAndVisible];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     return YES;
 }
 
