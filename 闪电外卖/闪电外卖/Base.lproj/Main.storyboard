@@ -14,15 +14,16 @@
                         <viewControllerLayoutGuide type="bottom" id="Msb-4w-sdF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="n4w-eJ-d84">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KbI-1K-Zxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903" y="1176"/>
+            <point key="canvasLocation" x="683.5" y="1178.5"/>
         </scene>
     </scenes>
 </document>

@@ -26,6 +26,8 @@
 		C9DBAB8C1BDCCB0D0055FCA9 /* WMText2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB8A1BDCCB0D0055FCA9 /* WMText2ViewController.m */; };
 		C9DBAB8D1BDCCB0D0055FCA9 /* WMText2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DBAB8B1BDCCB0D0055FCA9 /* WMText2ViewController.xib */; };
 		C9DBAB911BDCCD740055FCA9 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB901BDCCD740055FCA9 /* Colours.m */; };
+		C9DBAB961BDD0B250055FCA9 /* HWSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB951BDD0B250055FCA9 /* HWSearchBar.m */; };
+		C9DBABAB1BDD1D330055FCA9 /* WMHomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DBABAA1BDD1D330055FCA9 /* WMHomeViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,9 @@
 		C9DBAB8B1BDCCB0D0055FCA9 /* WMText2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMText2ViewController.xib; sourceTree = "<group>"; };
 		C9DBAB8F1BDCCD740055FCA9 /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
 		C9DBAB901BDCCD740055FCA9 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
+		C9DBAB941BDD0B250055FCA9 /* HWSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWSearchBar.h; sourceTree = "<group>"; };
+		C9DBAB951BDD0B250055FCA9 /* HWSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWSearchBar.m; sourceTree = "<group>"; };
+		C9DBABAA1BDD1D330055FCA9 /* WMHomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMHomeViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +161,8 @@
 		C9DBAB5D1BDC9C920055FCA9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C9DBAB5E1BDC9D6A0055FCA9 /* WMHomeViewController.h */,
-				C9DBAB5F1BDC9D6A0055FCA9 /* WMHomeViewController.m */,
+				C9DBAB9F1BDD123D0055FCA9 /* Controller */,
+				C9DBAB9E1BDD12310055FCA9 /* View */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -209,7 +214,8 @@
 		C9DBAB651BDC9E2F0055FCA9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				C9DBAB921BDCCD7D0055FCA9 /* Tools */,
+				C9DBAB931BDD0B180055FCA9 /* View */,
+				C9DBAB921BDCCD7D0055FCA9 /* Lib */,
 				C9DBAB7D1BDCCA200055FCA9 /* Category */,
 				C9DBAB7C1BDCCA120055FCA9 /* Controller */,
 			);
@@ -248,12 +254,38 @@
 			path = "颜色-Colours";
 			sourceTree = "<group>";
 		};
-		C9DBAB921BDCCD7D0055FCA9 /* Tools */ = {
+		C9DBAB921BDCCD7D0055FCA9 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
 				C9DBAB8E1BDCCD740055FCA9 /* Colours */,
 			);
-			name = Tools;
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		C9DBAB931BDD0B180055FCA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9DBAB941BDD0B250055FCA9 /* HWSearchBar.h */,
+				C9DBAB951BDD0B250055FCA9 /* HWSearchBar.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C9DBAB9E1BDD12310055FCA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C9DBAB9F1BDD123D0055FCA9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C9DBAB5E1BDC9D6A0055FCA9 /* WMHomeViewController.h */,
+				C9DBAB5F1BDC9D6A0055FCA9 /* WMHomeViewController.m */,
+				C9DBABAA1BDD1D330055FCA9 /* WMHomeViewController.storyboard */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9DBABAB1BDD1D330055FCA9 /* WMHomeViewController.storyboard in Resources */,
 				C9DBAB8D1BDCCB0D0055FCA9 /* WMText2ViewController.xib in Resources */,
 				3C88FFCC1BDC92BC0013A231 /* Main.storyboard in Resources */,
 				3C88FFD11BDC92BC0013A231 /* LaunchScreen.xib in Resources */,
@@ -365,6 +398,7 @@
 				C9DBAB7B1BDCC3DA0055FCA9 /* WMOrderViewController.m in Sources */,
 				C9DBAB911BDCCD740055FCA9 /* Colours.m in Sources */,
 				3C88FFC61BDC92BC0013A231 /* AppDelegate.m in Sources */,
+				C9DBAB961BDD0B250055FCA9 /* HWSearchBar.m in Sources */,
 				C9DBAB871BDCCAFA0055FCA9 /* WMText1ViewController.m in Sources */,
 				C9DBAB781BDCC39B0055FCA9 /* WMDiscoverViewController.m in Sources */,
 				C9DBAB601BDC9D6A0055FCA9 /* WMHomeViewController.m in Sources */,

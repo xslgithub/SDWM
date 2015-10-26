@@ -22,8 +22,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 外卖
-    WMHomeViewController *home = [[WMHomeViewController alloc] init];
-    [self addChildVc:home title:@"外卖" image:@"tabbar_waimai" selectedImage:@"tabbar_waimai_selected"];
+//    WMHomeViewController *home = [[WMHomeViewController alloc] init];
+//    [self addChildVc:home title:@"外卖" image:@"tabbar_waimai" selectedImage:@"tabbar_waimai_selected"];
+    UIStoryboard *home = [UIStoryboard storyboardWithName:@"WMHomeViewController" bundle:nil];
+    WMHomeViewController *homeVc = home.instantiateInitialViewController;
+    [self addChildVc:homeVc title:@"外卖" image:@"tabbar_waimai" selectedImage:@"tabbar_waimai_selected"];
     
     // 订单
     WMOrderViewController *order = [[WMOrderViewController alloc] init];
