@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "12FB8DD7B5900747E175B0B57E2081E54EBF4E89",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FD1D6F72BD49749DB0C6DCC5777E0D807A77ABAF" : 0,
+    "12FB8DD7B5900747E175B0B57E2081E54EBF4E89" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "63592D82-C5DE-47C2-990B-D4A19DDDDB44",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FD1D6F72BD49749DB0C6DCC5777E0D807A77ABAF" : "SDWM\/%E9%97%AA%E7%94%B5%E5%A4%96%E5%8D%96\/%E9%97%AA%E7%94%B5%E5%A4%96%E5%8D%96\/SDCycleScrollView\/",
+    "12FB8DD7B5900747E175B0B57E2081E54EBF4E89" : "SDWM\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "闪电外卖",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "闪电外卖\/闪电外卖.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:xslgithub\/SDWM.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "12FB8DD7B5900747E175B0B57E2081E54EBF4E89"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gsdios\/SDCycleScrollView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FD1D6F72BD49749DB0C6DCC5777E0D807A77ABAF"
+    }
+  ]
+}
