@@ -36,9 +36,7 @@
 		C9C48C4C1BDE2BE8009650B6 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C48C431BDE2BE8009650B6 /* SDCollectionViewCell.m */; };
 		C9C48C4D1BDE2BE8009650B6 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C48C451BDE2BE8009650B6 /* SDCycleScrollView.m */; };
 		C9C48C4E1BDE2BE8009650B6 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C48C471BDE2BE8009650B6 /* UIView+SDExtension.m */; };
-		C9C48C541BDE36BD009650B6 /* UIImage+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C48C531BDE36BD009650B6 /* UIImage+NJ.m */; };
 		C9C48C5B1BDE410B009650B6 /* WMHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C48C5A1BDE410B009650B6 /* WMHomeView.m */; };
-		C9C48C5D1BDE4127009650B6 /* WMHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C48C5C1BDE4127009650B6 /* WMHomeView.xib */; };
 		C9DBAB601BDC9D6A0055FCA9 /* WMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB5F1BDC9D6A0055FCA9 /* WMHomeViewController.m */; };
 		C9DBAB6F1BDCC34D0055FCA9 /* WMTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB6E1BDCC34D0055FCA9 /* WMTabBarViewController.m */; };
 		C9DBAB721BDCC3680055FCA9 /* WMNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DBAB711BDCC3680055FCA9 /* WMNavigationViewController.m */; };
@@ -125,11 +123,8 @@
 		C9C48C451BDE2BE8009650B6 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		C9C48C461BDE2BE8009650B6 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		C9C48C471BDE2BE8009650B6 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
-		C9C48C521BDE36BD009650B6 /* UIImage+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NJ.h"; sourceTree = "<group>"; };
-		C9C48C531BDE36BD009650B6 /* UIImage+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NJ.m"; sourceTree = "<group>"; };
 		C9C48C591BDE410B009650B6 /* WMHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMHomeView.h; sourceTree = "<group>"; };
 		C9C48C5A1BDE410B009650B6 /* WMHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMHomeView.m; sourceTree = "<group>"; };
-		C9C48C5C1BDE4127009650B6 /* WMHomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMHomeView.xib; sourceTree = "<group>"; };
 		C9DBAB5E1BDC9D6A0055FCA9 /* WMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMHomeViewController.h; sourceTree = "<group>"; };
 		C9DBAB5F1BDC9D6A0055FCA9 /* WMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMHomeViewController.m; sourceTree = "<group>"; };
 		C9DBAB6D1BDCC34D0055FCA9 /* WMTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMTabBarViewController.h; sourceTree = "<group>"; };
@@ -198,8 +193,6 @@
 		3C88FFBF1BDC92BC0013A231 /* 闪电外卖 */ = {
 			isa = PBXGroup;
 			children = (
-				C9C48C521BDE36BD009650B6 /* UIImage+NJ.h */,
-				C9C48C531BDE36BD009650B6 /* UIImage+NJ.m */,
 				C9DBAB651BDC9E2F0055FCA9 /* Main */,
 				C9DBAB641BDC9E160055FCA9 /* Mine */,
 				C9DBAB631BDC9DFE0055FCA9 /* Discover */,
@@ -437,7 +430,6 @@
 				C9DBABAA1BDD1D330055FCA9 /* WMHomeViewController.storyboard */,
 				C9C48C591BDE410B009650B6 /* WMHomeView.h */,
 				C9C48C5A1BDE410B009650B6 /* WMHomeView.m */,
-				C9C48C5C1BDE4127009650B6 /* WMHomeView.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -529,7 +521,6 @@
 				3C88FFD11BDC92BC0013A231 /* LaunchScreen.xib in Resources */,
 				3C88FFCE1BDC92BC0013A231 /* Images.xcassets in Resources */,
 				C9DBAB881BDCCAFA0055FCA9 /* WMText1ViewController.xib in Resources */,
-				C9C48C5D1BDE4127009650B6 /* WMHomeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +545,6 @@
 				C9DBAB831BDCCA410055FCA9 /* UIView+Extension.m in Sources */,
 				C9DBAB751BDCC38A0055FCA9 /* WMMineTableViewController.m in Sources */,
 				C9DBAB7B1BDCC3DA0055FCA9 /* WMOrderViewController.m in Sources */,
-				C9C48C541BDE36BD009650B6 /* UIImage+NJ.m in Sources */,
 				C9C48C2D1BDE2BCD009650B6 /* SDWebImageDownloader.m in Sources */,
 				C9C48C491BDE2BE8009650B6 /* TAAnimatedDotView.m in Sources */,
 				C9DBAB911BDCCD740055FCA9 /* Colours.m in Sources */,

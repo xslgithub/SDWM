@@ -9,7 +9,6 @@
 #import "SDCycleScrollView.h"
 #import "WMHomeViewController.h"
 #import "WMHomeView.h"
-#import "UIImage+NJ.h"
 
 
 @interface WMHomeViewController ()<SDCycleScrollViewDelegate>
@@ -21,7 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    NSArray *iconName = @[@"美食",
+                        @"超市",
+                        @"鲜果购",
+                        @"甜点饮品",
+                        @"土豪馆",
+                        @"SD专送",
+                        @"鲜花蛋糕",
+                        @"送药上门"
+                        ];
+    
     // 设置scrollView
     [self setScrollView];
     
@@ -35,7 +43,10 @@
         int col = i % 4;
         CGFloat btnX = col * btnW;
         CGFloat btnY = row * btnH;
-        UIButton *btn = [[[NSBundle mainBundle] loadNibNamed:@"WMHomeView" owner:nil options:nil] lastObject];
+        WMHomeView *btn = [[WMHomeView alloc] init];
+        [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"icon%d", i]] forState:UIControlStateNormal];
+        
+        [btn setTitle:iconName[i] forState:UIControlStateNormal];
         [self.listView addSubview:btn];
         
         btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
@@ -76,16 +87,16 @@
                         [UIImage imageNamed:@"h4.jpg"]
                         ];
     
-    NSArray *titles = @[@"闪电外卖",
-                        @"全球最快",
-                        @"朱波龙哥",
-                        @"一统江湖"
-                        ];
+//    NSArray *titles = @[@"闪电外卖",
+//                        @"全球最快",
+//                        @"朱波龙哥",
+//                        @"一统江湖"
+//                        ];
     
     CGFloat w = self.view.bounds.size.width;
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, w, 130) imagesGroup:images];
     
-    cycleScrollView.titlesGroup = titles;
+//    cycleScrollView.titlesGroup = titles;
     cycleScrollView.infiniteLoop = YES;
     cycleScrollView.delegate = self;
     cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;

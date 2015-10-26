@@ -15,11 +15,11 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="cN8-Ip-Jgk">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="307"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7U-91-iTK">
-                                    <rect key="frame" x="0.0" y="130" width="375" height="162"/>
+                                    <rect key="frame" x="0.0" y="130" width="375" height="169"/>
                                     <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </view>
@@ -29,7 +29,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="grj-p5-XQo">
-                                <rect key="frame" x="0.0" y="328" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="335" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="grj-p5-XQo" id="Add-YG-EJM">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
