@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H5a-3b-L2b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H5a-3b-L2b">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -15,14 +15,21 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="cN8-Ip-Jgk">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7U-91-iTK">
+                                    <rect key="frame" x="0.0" y="130" width="375" height="162"/>
+                                    <animations/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </view>
+                            </subviews>
                             <animations/>
-                            <color key="backgroundColor" red="0.93150036319999996" green="1" blue="0.28364090330000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.92330752902208935" green="0.94368408297715145" blue="0.96073980148342053" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="grj-p5-XQo">
-                                <rect key="frame" x="0.0" y="243" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="328" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="grj-p5-XQo" id="Add-YG-EJM">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -40,6 +47,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="headView" destination="cN8-Ip-Jgk" id="bzL-Qj-wMR"/>
+                        <outlet property="listView" destination="I7U-91-iTK" id="OIh-pf-jac"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYX-rO-gEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
