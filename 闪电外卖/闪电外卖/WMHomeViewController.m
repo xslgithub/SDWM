@@ -11,10 +11,12 @@
 #import "MJExtension.h"
 #import "WMHomeView.h"
 #import "WMHomeCell.h"
+#import "WMShopFrame.h"
 #import "AFNetworking.h"
 #import "WMShopData.h"
 #import "WMData.h"
 #import "WMDetail.h"
+#import "UIImageView+WebCache.h"
 
 @interface WMHomeViewController ()<SDCycleScrollViewDelegate>
 
@@ -36,6 +38,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 去掉滚动条
+    self.tableView.showsVerticalScrollIndicator = NO;
 
     // 设置scrollView
     [self setScrollView];
@@ -45,6 +49,8 @@
     
     // 发送网络请求
     [self requestShopData];
+    
+    
 }
 
 // 发送网络请求商户
@@ -70,30 +76,28 @@
          // 把json数据转成模型数据
          WMShopData *shopData = [WMShopData objectWithKeyValues:json];
          WMData *data = shopData.data;
-         [self.shops addObject:data.deals];
-         for (WMDetail *detail in data.deals) {
-             
-             NSLog(@"%@", detail.describe);
-            NSLog(@"%d", detail.market_price);
-         }
+         
+         NSArray *newFrames = [self stausFramesWithShops:data];
+         
+         [self.shops addObjectsFromArray:newFrames];
+         
+         // 刷新表格
+         [self.tableView reloadData];
      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
          // 请求失败的时候调用调用这个block
          NSLog(@"请求失败%@", error);
      }];
 }
 
-#pragma mark - TableView代理方法
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSArray *)stausFramesWithShops:(WMData *)data
 {
-    NSLog(@"%ld", self.shops.count);
-    return 30;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    WMHomeCell *cell = [WMHomeCell cellWithTableView:tableView];
-    cell.textLabel.text = @"fuck me";
-    return cell;
+    NSMutableArray *array = [NSMutableArray array];
+    for (WMDetail *detail in data.deals) {
+        WMShopFrame *f = [[WMShopFrame alloc] init];
+        f.detail = detail;
+        [array addObject:f];
+    }
+    return array;
 }
 
 #pragma mark -ListView
@@ -202,5 +206,27 @@
 {
     NSLog(@"---点击了第%ld张图片", index);
 }
+
+#pragma mark - TableView代理方法
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.shops.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WMHomeCell *cell = [WMHomeCell cellWithTableView:tableView];
+    cell.shopFrame = self.shops[indexPath.row];
+    return cell;
+}
+
+// 返回cell的高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    WMShopFrame *shopF = self.shops[indexPath.row];
+//    return shopF.cellHeight;
+    return 90;
+}
+
 
 @end

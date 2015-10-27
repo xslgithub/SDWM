@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WMShopFrame;
 
 @interface WMHomeCell : UITableViewCell
 + (instancetype)cellWithTableView:(UITableView *)tableView;
+
+@property (nonatomic, strong)WMShopFrame *shopFrame;
 @end
