@@ -8,15 +8,31 @@
 
 #import "SDCycleScrollView.h"
 #import "WMHomeViewController.h"
+#import "MJExtension.h"
 #import "WMHomeView.h"
 #import "WMHomeCell.h"
+#import "AFNetworking.h"
+#import "WMShopData.h"
+#import "WMData.h"
+#import "WMDetail.h"
 
 @interface WMHomeViewController ()<SDCycleScrollViewDelegate>
+
+@property (nonatomic, strong) NSMutableArray *shops;
+
 @property (weak, nonatomic) IBOutlet UIView *headView;
 @property (weak, nonatomic) IBOutlet UIView *listView;
 @end
 
 @implementation WMHomeViewController
+- (NSMutableArray *)shops
+{
+    if (!_shops) {
+        self.shops = [NSMutableArray array];
+    }
+    
+    return _shops;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,11 +42,50 @@
     
     // 设置listView
     [self setListView];
+    
+    // 发送网络请求
+    [self requestShopData];
+}
+
+// 发送网络请求商户
+- (void)requestShopData
+{
+    // 1.创建一个请求操作管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    // 声明一下：服务器返回的是JSON数据
+    mgr.responseSerializer = [AFJSONResponseSerializer serializer];
+    // responseObject的类型是NSDictionary或者NSArray
+    
+    // 2.请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"location"] = @"113988402, 22.542666";
+    params[@"city_id"] = @300210000;
+    //    params[@"radius"] = @1000;
+    [mgr.requestSerializer setValue:@"521b2d93910e6156d3176d9711eb04ff" forHTTPHeaderField:@"apikey"];
+    // 3.发送一个GET请求
+    NSString *url = @"http://apis.baidu.com/baidunuomi/openapi/searchdeals";
+    [mgr GET:url parameters:params
+     success:^(AFHTTPRequestOperation *operation, NSDictionary *json) {
+         // 请求成功的时候调用这个block
+         // 把json数据转成模型数据
+         WMShopData *shopData = [WMShopData objectWithKeyValues:json];
+         WMData *data = shopData.data;
+         [self.shops addObject:data.deals];
+         for (WMDetail *detail in data.deals) {
+             
+             NSLog(@"%@", detail.describe);
+            NSLog(@"%d", detail.market_price);
+         }
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         // 请求失败的时候调用调用这个block
+         NSLog(@"请求失败%@", error);
+     }];
 }
 
 #pragma mark - TableView代理方法
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSLog(@"%ld", self.shops.count);
     return 30;
 }
 
