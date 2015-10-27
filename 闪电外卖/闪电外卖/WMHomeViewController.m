@@ -37,7 +37,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     WMHomeCell *cell = [WMHomeCell cellWithTableView:tableView];
-    cell.textLabel.text = @"kuaican我爱你";
+    cell.textLabel.text = @"ლ(′◉❥◉｀ლ)";
     return cell;
 }
 
