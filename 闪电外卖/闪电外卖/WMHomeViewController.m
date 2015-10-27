@@ -9,7 +9,7 @@
 #import "SDCycleScrollView.h"
 #import "WMHomeViewController.h"
 #import "WMHomeView.h"
-
+#import "WMHomeCell.h"
 
 @interface WMHomeViewController ()<SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *headView;
@@ -20,24 +20,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *iconName = @[@"美食",
-                        @"超市",
-                        @"鲜果购",
-                        @"甜点饮品",
-                        @"土豪馆",
-                        @"SD专送",
-                        @"鲜花蛋糕",
-                        @"送药上门"
-                        ];
-    
+
     // 设置scrollView
     [self setScrollView];
     
     // 设置listView
-    
+    [self setListView];
+}
+
+#pragma mark - TableView代理方法
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+    return 30;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WMHomeCell *cell = [WMHomeCell cellWithTableView:tableView];
+    cell.textLabel.text = @"bozai我爱你";
+    return cell;
+}
+
+#pragma mark -ListView
+- (void)setListView
+{
+    NSArray *iconName = @[@"美食",
+                          @"超市",
+                          @"鲜果购",
+                          @"甜点饮品",
+                          @"土豪馆",
+                          @"SD专送",
+                          @"鲜花蛋糕",
+                          @"送药上门"
+                          ];
+    // 按钮的宽高
     CGFloat btnW = 94;
     CGFloat btnH = 81;
-    
+    // 添加8个按钮
     for (int i = 0; i < 8; i++) {
         int row = i / 4;
         int col = i % 4;
@@ -50,41 +69,61 @@
         [self.listView addSubview:btn];
         
         btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
-        [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
         btn.tag = i;
     }
 }
 
-- (void)click
+// 监听按钮的点击
+- (void)btnClick:(UIButton *)btn
 {
-    NSLog(@"nihao");
-}
-
-#pragma mark - TableView代理方法
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 30;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    switch (btn.tag) {
+        case 0:
+            NSLog(@"点击了0");
+            break;
+            
+        case 1:
+            NSLog(@"点击了1");
+            break;
+            
+        case 2:
+            NSLog(@"点击了2");
+            break;
+            
+        case 3:
+            NSLog(@"点击了3");
+            break;
+            
+        case 4:
+            NSLog(@"点击了4");
+            break;
+            
+        case 5:
+            NSLog(@"点击了5");
+            break;
+            
+        case 6:
+            NSLog(@"点击了6");
+            break;
+            
+        case 7:
+            NSLog(@"点击了7");
+            break;
+            
+        case 8:
+            NSLog(@"点击了8");
+            break;
     }
-    cell.textLabel.text = @"bobo我爱你";
-    return cell;
 }
-
 
 #pragma mark - ScrollView
 - (void)setScrollView
 {
-    NSArray *images = @[[UIImage imageNamed:@"h1.jpg"],
-                        [UIImage imageNamed:@"h2.jpg"],
-                        [UIImage imageNamed:@"h3.jpg"],
-                        [UIImage imageNamed:@"h4.jpg"]
+    NSArray *images = @[[UIImage imageNamed:@"h0"],
+                        [UIImage imageNamed:@"h1"],
+                        [UIImage imageNamed:@"h2"],
+                        [UIImage imageNamed:@"h3"],
+                        [UIImage imageNamed:@"h4"]
                         ];
     
 //    NSArray *titles = @[@"闪电外卖",

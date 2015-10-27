@@ -13,6 +13,7 @@
 		3C88FFCE1BDC92BC0013A231 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C88FFCD1BDC92BC0013A231 /* Images.xcassets */; };
 		3C88FFD11BDC92BC0013A231 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C88FFCF1BDC92BC0013A231 /* LaunchScreen.xib */; };
 		3C88FFDD1BDC92BC0013A231 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C88FFDC1BDC92BC0013A231 /* ____Tests.m */; };
+		C99B128E1BDF42DD0064616B /* WMHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C99B128D1BDF42DD0064616B /* WMHomeCell.m */; };
 		C9C48C281BDE2BCD009650B6 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C48C081BDE2BCD009650B6 /* MKAnnotationView+WebCache.m */; };
 		C9C48C291BDE2BCD009650B6 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C48C0A1BDE2BCD009650B6 /* NSData+ImageContentType.m */; };
 		C9C48C2A1BDE2BCD009650B6 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C48C0C1BDE2BCD009650B6 /* SDImageCache.m */; };
@@ -76,6 +77,8 @@
 		3C88FFD61BDC92BC0013A231 /* 闪电外卖Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "闪电外卖Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C88FFDB1BDC92BC0013A231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C88FFDC1BDC92BC0013A231 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		C99B128C1BDF42DD0064616B /* WMHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMHomeCell.h; sourceTree = "<group>"; };
+		C99B128D1BDF42DD0064616B /* WMHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMHomeCell.m; sourceTree = "<group>"; };
 		C9C48C071BDE2BCD009650B6 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		C9C48C081BDE2BCD009650B6 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		C9C48C091BDE2BCD009650B6 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -231,6 +234,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C99B128F1BDF443C0064616B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C9C48C061BDE2BCD009650B6 /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +313,7 @@
 		C9DBAB5D1BDC9C920055FCA9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C99B128F1BDF443C0064616B /* Model */,
 				C9DBAB9F1BDD123D0055FCA9 /* Controller */,
 				C9DBAB9E1BDD12310055FCA9 /* View */,
 			);
@@ -418,6 +429,10 @@
 		C9DBAB9E1BDD12310055FCA9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C9C48C591BDE410B009650B6 /* WMHomeView.h */,
+				C9C48C5A1BDE410B009650B6 /* WMHomeView.m */,
+				C99B128C1BDF42DD0064616B /* WMHomeCell.h */,
+				C99B128D1BDF42DD0064616B /* WMHomeCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -428,8 +443,6 @@
 				C9DBAB5E1BDC9D6A0055FCA9 /* WMHomeViewController.h */,
 				C9DBAB5F1BDC9D6A0055FCA9 /* WMHomeViewController.m */,
 				C9DBABAA1BDD1D330055FCA9 /* WMHomeViewController.storyboard */,
-				C9C48C591BDE410B009650B6 /* WMHomeView.h */,
-				C9C48C5A1BDE410B009650B6 /* WMHomeView.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -567,6 +580,7 @@
 				C9C48C2B1BDE2BCD009650B6 /* SDWebImageCompat.m in Sources */,
 				C9C48C4E1BDE2BE8009650B6 /* UIView+SDExtension.m in Sources */,
 				C9C48C371BDE2BCD009650B6 /* UIView+WebCacheOperation.m in Sources */,
+				C99B128E1BDF42DD0064616B /* WMHomeCell.m in Sources */,
 				C9DBAB6F1BDCC34D0055FCA9 /* WMTabBarViewController.m in Sources */,
 				C9DBAB821BDCCA410055FCA9 /* UIBarButtonItem+Extension.m in Sources */,
 				C9C48C5B1BDE410B009650B6 /* WMHomeView.m in Sources */,
