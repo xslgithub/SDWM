@@ -40,7 +40,7 @@
 
 + (instancetype)cellWithTableView:(UITableView *)tableView
 {
-    static NSString *ID = @"cell";
+    static NSString *ID = @"Home";
     WMHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
         cell = [[WMHomeCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
@@ -70,28 +70,28 @@
         // 商家名称
         UILabel *titleLabel = [[UILabel alloc] init];
         [entiretyView addSubview:titleLabel];
-        titleLabel.font = [UIFont systemFontOfSize:15];
+        titleLabel.font = [UIFont systemFontOfSize:17];
         self.titleLabel = titleLabel;
         
         // 商家描述
         UILabel *describeLabel = [[UILabel alloc] init];
         [entiretyView addSubview:describeLabel];
         describeLabel.numberOfLines = 0;
-        describeLabel.font = [UIFont systemFontOfSize:12];
+        describeLabel.font = [UIFont systemFontOfSize:14];
         describeLabel.textColor = [UIColor grayColor];
         self.describeLabel = describeLabel;
         
         // 市场价格
         UILabel *market_priceLabel = [[UILabel alloc] init];
         [entiretyView addSubview:market_priceLabel];
-        market_priceLabel.font = [UIFont systemFontOfSize:10];
+        market_priceLabel.font = [UIFont systemFontOfSize:12];
         market_priceLabel.textColor = [UIColor grayColor];
         self.market_priceLabel = market_priceLabel;
         
         // 售卖价格
         UILabel *current_priceLabel = [[UILabel alloc] init];
         [entiretyView addSubview:current_priceLabel];
-        current_priceLabel.font = [UIFont systemFontOfSize:12];
+        current_priceLabel.font = [UIFont systemFontOfSize:14];
         current_priceLabel.textColor = [UIColor redColor];
         self.current_priceLabel = current_priceLabel;
 
@@ -128,8 +128,13 @@
     // 市场价格
     self.market_priceLabel.frame = shopFrame.market_priceLabelF;
     int market = detail.market_price / 100;
-    self.market_priceLabel.text = [NSString stringWithFormat:@"%d", market];
-    
+    //    self.market_priceLabel.text = [NSString stringWithFormat:@"%d", market];
+    // 设置横线
+    NSString *str = [NSString stringWithFormat:@"%d", market];
+    NSMutableAttributedString *strA = [[NSMutableAttributedString alloc] initWithString:str];
+    [strA setAttributes:@{NSStrikethroughStyleAttributeName:[NSNumber numberWithInteger:NSUnderlineStyleSingle]} range:NSMakeRange(0, strA.length)];
+    self.market_priceLabel.attributedText = strA;
+
     // 售卖价格
     self.current_priceLabel.frame = shopFrame.current_priceLabelF;
     int current = detail.current_price / 100;

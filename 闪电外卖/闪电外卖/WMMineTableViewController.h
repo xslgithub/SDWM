@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface WMMineTableViewController : UITableViewController
+@property (nonatomic, strong)NSString *icon;
+
+@property (nonatomic, strong)NSString *name;
 
 @end

@@ -7,10 +7,16 @@
 //
 
 #import "WMDetail.h"
+#import "WMShops.h"
 
 @implementation WMDetail
 - (NSDictionary *)replacedKeyFromPropertyName
 {
     return @{@"describe" : @"description"};
+}
+
+- (NSDictionary *)objectClassInArray
+{
+    return @{@"shops": [WMShops class]};
 }
 @end

@@ -17,6 +17,9 @@
 #import "WMData.h"
 #import "WMDetail.h"
 #import "UIImageView+WebCache.h"
+#import "WMDealDetailViewController.h"
+#import "WMShops.h"
+#import "MJRefresh.h"
 
 @interface WMHomeViewController ()<SDCycleScrollViewDelegate>
 
@@ -24,6 +27,9 @@
 
 @property (weak, nonatomic) IBOutlet UIView *headView;
 @property (weak, nonatomic) IBOutlet UIView *listView;
+
+
+@property (nonatomic, strong)WMData *data;
 @end
 
 @implementation WMHomeViewController
@@ -36,8 +42,23 @@
     return _shops;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+//    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstStart"]){
+//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstStart"];
+//    }else{
+//        [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:46/255.0 green:134/255.0 blue:230/255.0 alpha:1.0]];
+//        self.navigationController.navigationBar.alpha = 1.0;
+//    }
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:46/255.0 green:134/255.0 blue:230/255.0 alpha:1.0]];
+    self.navigationController.navigationBar.alpha = 1.0;
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // 去掉滚动条
     self.tableView.showsVerticalScrollIndicator = NO;
 
@@ -50,7 +71,30 @@
     // 发送网络请求
     [self requestShopData];
     
+    // 下拉刷新
+    [self setupDownRefresh];
     
+    // 上拉刷新
+    [self setupUpRefresh];
+}
+
+- (void)setupDownRefresh
+{
+    [self.tableView addHeaderWithTarget:self action:@selector(requestShopData)];
+    self.tableView.headerRefreshingText = @"波仔正在帮你刷新";
+    // 一进程序就刷新
+//    [self.tableView headerBeginRefreshing];
+}
+
+- (void)setupUpRefresh
+{
+    __weak WMHomeViewController *weakSelf = self;
+    [self.tableView addFooterWithCallback:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"请求数据成功");
+            [weakSelf.tableView footerEndRefreshing];
+        });
+    }];
 }
 
 // 发送网络请求商户
@@ -64,9 +108,10 @@
     
     // 2.请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"location"] = @"113988402, 22.542666";
+    params[@"location"] = @"113.977038, 22.549709";
     params[@"city_id"] = @300210000;
-    //    params[@"radius"] = @1000;
+    params[@"page_size"] = @30;
+    params[@"sort"] = @5;
     [mgr.requestSerializer setValue:@"521b2d93910e6156d3176d9711eb04ff" forHTTPHeaderField:@"apikey"];
     // 3.发送一个GET请求
     NSString *url = @"http://apis.baidu.com/baidunuomi/openapi/searchdeals";
@@ -76,13 +121,15 @@
          // 把json数据转成模型数据
          WMShopData *shopData = [WMShopData objectWithKeyValues:json];
          WMData *data = shopData.data;
-         
+         self.data = data;
          NSArray *newFrames = [self stausFramesWithShops:data];
          
          [self.shops addObjectsFromArray:newFrames];
-         
          // 刷新表格
          [self.tableView reloadData];
+         
+         // 结束刷新
+         [self.tableView headerEndRefreshing];
      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
          // 请求失败的时候调用调用这个block
          NSLog(@"请求失败%@", error);
@@ -216,6 +263,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     WMHomeCell *cell = [WMHomeCell cellWithTableView:tableView];
+    
     cell.shopFrame = self.shops[indexPath.row];
     return cell;
 }
@@ -223,10 +271,33 @@
 // 返回cell的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    WMShopFrame *shopF = self.shops[indexPath.row];
-//    return shopF.cellHeight;
-    return 90;
+    WMShopFrame *shopF = self.shops[indexPath.row];
+    return shopF.cellHeight;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WMShopFrame *wFrame = self.shops[indexPath.row];
+    WMDetail *da = wFrame.detail;
+    WMShops *shops = da.shops[0];
+    WMDealDetailViewController *dealDetail = [[WMDealDetailViewController alloc] init];
+    // 传到WMDealDetailViewController控制器的参数
+    // 商店ID
+    dealDetail.deal_id = da.deal_id;
+    dealDetail.shopID = shops.shop_id;
+    // 商店名称
+    dealDetail.shopName = da.title;
+    // 描述
+    dealDetail.describe = da.describe;
+    // 已售
+    dealDetail.saleNum = da.sale_num;
+    // 市场价格
+    dealDetail.marketPrice = da.market_price;
+    // 售卖价格
+    dealDetail.currentPrice = da.current_price;
+    
+    dealDetail.data = self.data;
+    [self.navigationController pushViewController:dealDetail animated:YES];
+}
 
 @end

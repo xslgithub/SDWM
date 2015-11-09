@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface WMDetail : NSObject
+// 商家id
+@property (nonatomic, strong)NSArray *shops;
 // 商家图片（小）
 @property (nonatomic, strong)NSString *tiny_image;
 
@@ -26,5 +28,11 @@
 
 // 用户评分
 @property (nonatomic, assign)float score;
+
+// 团单详情
+@property (nonatomic, strong)NSNumber *deal_id;
+
+// 已售
+@property (nonatomic, strong)NSNumber *sale_num;
 
 @end

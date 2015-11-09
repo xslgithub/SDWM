@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "WMTabBarViewController.h"
+#import "UMSocial.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [UMSocialData setAppKey:@"5640a52567e58e7cfc0015d1"];
+    
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     self.window.rootViewController = [[WMTabBarViewController alloc] init];

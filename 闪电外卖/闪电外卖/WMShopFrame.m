@@ -22,7 +22,7 @@
     
     // 商家图片（小）
     CGFloat imageW = 115;
-    CGFloat imageH = 70;
+    CGFloat imageH = 90;
     CGFloat imageX = padding;
     CGFloat imageY = padding;
     self.tiny_imageViewF = CGRectMake(imageX, imageY, imageW, imageH);
@@ -30,25 +30,25 @@
     // 商家名称
     CGFloat titleX = CGRectGetMaxX(self.tiny_imageViewF) + padding;
     CGFloat titleY = imageY;
-    CGSize nameSize = [detail.title sizeWithFont:[UIFont systemFontOfSize:15]];
+    CGSize nameSize = [detail.title sizeWithFont:[UIFont systemFontOfSize:17]];
     self.titleLabelF = (CGRect){{titleX, titleY}, nameSize};
     
     // 描述
     CGFloat describeX = CGRectGetMaxX(self.tiny_imageViewF) + padding;
     CGFloat describeY = CGRectGetMaxY(self.titleLabelF) + 5;
     CGFloat maxW = cellW - imageW - 30;
-    CGSize describeSize = [detail.describe sizeWithFont:[UIFont systemFontOfSize:12] maxW:maxW];
+    CGSize describeSize = [detail.describe sizeWithFont:[UIFont systemFontOfSize:14] maxW:maxW];
     self.describeLabelF = (CGRect){{describeX, describeY}, describeSize};
     
     // 售卖价格
     CGFloat cpriceX = CGRectGetMaxX(self.tiny_imageViewF) + padding;
-    CGSize cpriceSize = [[NSString stringWithFormat:@"%d", detail.current_price] sizeWithFont:[UIFont systemFontOfSize:12]];
+    CGSize cpriceSize = [[NSString stringWithFormat:@"%d", detail.current_price] sizeWithFont:[UIFont systemFontOfSize:14]];
     CGFloat cpriceY = CGRectGetMaxY(self.tiny_imageViewF) - cpriceSize.height;
     self.current_priceLabelF = (CGRect){{cpriceX, cpriceY}, cpriceSize};
     
     // 市场价格
     CGFloat mpriceX = CGRectGetMaxX(self.current_priceLabelF) + 5;
-    CGSize mpriceSize = [[NSString stringWithFormat:@"%d", detail.market_price] sizeWithFont:[UIFont systemFontOfSize:10]];
+    CGSize mpriceSize = [[NSString stringWithFormat:@"%d", detail.market_price] sizeWithFont:[UIFont systemFontOfSize:12]];
     CGFloat mpriceY = CGRectGetMaxY(self.current_priceLabelF) - mpriceSize.height;
     self.market_priceLabelF = (CGRect){{mpriceX, mpriceY}, mpriceSize};
 

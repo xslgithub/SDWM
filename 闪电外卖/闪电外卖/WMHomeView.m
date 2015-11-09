@@ -4,10 +4,9 @@
 //
 //  Created by 朱波 on 15/10/26.
 //  Copyright © 2015年 WM. All rights reserved.
-//
+//  设置首页header上按钮的属性
 
 #import "WMHomeView.h"
-#import "UIView+Extension.h"
 
 @implementation WMHomeView
 

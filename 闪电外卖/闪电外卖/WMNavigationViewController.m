@@ -8,7 +8,6 @@
 
 #import "WMNavigationViewController.h"
 #import "UIBarButtonItem+Extension.h"
-#import "Colours.h"
 
 @interface WMNavigationViewController ()
 
@@ -40,7 +39,7 @@
         
         /* 设置导航栏上面的内容 */
         // 设置左边的返回按钮
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(back) image:@"navigation_backbtn" highImage:nil];
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(back) image:@"back" highImage:@"back"];
     }
     
     [super pushViewController:viewController animated:animated];
